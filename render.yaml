@@ -5,6 +5,3 @@ services:
     buildCommand: ""
     startCommand: gunicorn app:app
     plan: free
-    envVars:
-      - key: PORT
-        value: 10000
