@@ -6,9 +6,6 @@ import uuid
 from threading import Lock
 from flask_cors import CORS
 
-# Garante que o ffmpeg está no PATH
-os.environ["PATH"] += os.pathsep + r"C:\\Users\\isaqu\\Downloads\\ffmpeg-2025-07-10-git-82aeee3c19-full_build\\ffmpeg-2025-07-10-git-82aeee3c19-full_build\\bin"
-
 app = Flask(__name__)
 CORS(app)
 
