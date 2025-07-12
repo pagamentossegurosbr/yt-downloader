@@ -1,4 +1,4 @@
-const BASE_URL = 'https://notch-downloader-backend.onrender.com';
+const BASE_URL = 'https://yt-downloader-xrme.onrender.com';
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.download-form');
