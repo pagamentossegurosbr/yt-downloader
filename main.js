@@ -1,3 +1,5 @@
+const BASE_URL = 'https://notch-downloader-backend.onrender.com';
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.download-form');
     const btnDownload = document.querySelector('.btn-download');
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
 
-            const res = await fetch('/info', {
+            const res = await fetch(`${BASE_URL}/info`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url }),
@@ -181,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (progressInterval) clearInterval(progressInterval);
         progressInterval = setInterval(async () => {
             try {
-                const res = await fetch(`/progress/${download_id}`, {
+                const res = await fetch(`${BASE_URL}/progress/${download_id}`, {
                     signal: AbortSignal.timeout(5000) // 5s timeout
                 });
                 if (res.ok) {
@@ -199,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 300000); // 5min timeout
 
-            const res = await fetch('/download', {
+            const res = await fetch(`${BASE_URL}/download`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url, format_id, download_id }),
