@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notch Downloader - Baixe vídeos do YouTube</title>
+  <link rel="icon" type="image/png" href="logo-notch.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-glass"></div>
+  <main class="main-content main-up">
+    <section class="glass-card card-vertical animate-card">
+      <!-- TÍTULO PRINCIPAL -->
+      <div class="title-section">
+        <h1 class="title">
+          <span class="title-icon">⚡</span>
+          Baixe vídeos do YouTube
+        </h1>
+        <p class="subtitle">A ferramenta mais avançada para downloads de alta qualidade</p>
+      </div>
+
+      <!-- INPUT E BOTÕES -->
+      <div class="input-section">
+        <form class="download-form" autocomplete="off">
+          <div class="input-row">
+            <input type="url" class="input-url input-lg input-url-wide" placeholder="Cole o link do vídeo do YouTube aqui..." required>
+            <button type="button" class="btn-info btn-lg">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Ver informações
+            </button>
+          </div>
+          
+          <div class="video-info" style="display:none; margin-top:16px;">
+            <div class="video-thumb-title">
+              <img class="video-thumb" src="" alt="Thumbnail" style="display:none;">
+              <div class="video-meta">
+                <div class="video-title"></div>
+                <div class="video-uploader"></div>
+                <div class="video-duration"></div>
+              </div>
+            </div>
+            <div class="quality-row">
+              <label for="quality-select">Qualidade:</label>
+              <select id="quality-select" class="quality-select input-lg">
+                <option value="best">Qualidade máxima (Vídeo+Áudio)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="action-row">
+            <button type="submit" class="btn-download btn-lg">
+              <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0l-5-5m5 5l5-5"/>
+              </svg>
+              Download
+            </button>
+          </div>
+          
+          <div class="progress-bar-container" style="display:none; margin-top:16px;">
+            <div class="progress-bar-bg">
+              <div class="progress-bar"></div>
+            </div>
+            <div class="progress-label">0%</div>
+          </div>
+        </form>
+      </div>
+
+      <!-- CARDS DE FEATURES -->
+      <div class="features-section">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Seguro e privado</h3>
+              <p class="feature-description">Downloads 100% seguros sem rastreamento</p>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="7" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Qualidade máxima</h3>
+              <p class="feature-description">Vídeos em resolução 4K e áudio HD</p>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                <path d="M12 20v-6m0 0l-3 3m3-3l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Fácil e rápido</h3>
+              <p class="feature-description">Interface intuitiva e downloads instantâneos</p>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">Premium Experience</h3>
+              <p class="feature-description">Design moderno e experiência de usuário excepcional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>Notch Downloader &copy; 2024 &mdash; Premium Experience</span>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html> 
