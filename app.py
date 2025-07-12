@@ -1,13 +1,16 @@
+
 import os
 from flask import Flask, request, send_file, jsonify, after_this_request
 import yt_dlp
 import uuid
 from threading import Lock
+from flask_cors import CORS
 
 # Garante que o ffmpeg está no PATH
 os.environ["PATH"] += os.pathsep + r"C:\\Users\\isaqu\\Downloads\\ffmpeg-2025-07-10-git-82aeee3c19-full_build\\ffmpeg-2025-07-10-git-82aeee3c19-full_build\\bin"
 
 app = Flask(__name__)
+CORS(app)
 
 DOWNLOAD_DIR = "downloads"
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
@@ -141,6 +144,3 @@ def get_progress(download_id):
     with progress_lock:
         percent = download_progress.get(download_id, 0)
     return jsonify({'progress': percent})
-
-if __name__ == '__main__':
-    app.run(debug=True)
